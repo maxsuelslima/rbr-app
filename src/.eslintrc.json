@@ -5,7 +5,7 @@
     },
     "extends": ["standard-with-typescript", "plugin:prettier/recommended"],
     "plugins":[
-        "prettier"
+        "prettier", "imports"
     ],
     "overrides": [
     ],
@@ -16,12 +16,24 @@
             "./tsconfig.json"
         ]
     },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+          },
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true,
+                "project": "./tsconfig.json"
+            }
+        }
+    },
     "rules": {
         "prettier/prettier": [
             "error",
             {
                 "endOfLine": "auto"
             }
-        ]
+        ],
+        "import/no-unresolved": "error"
     }
 }

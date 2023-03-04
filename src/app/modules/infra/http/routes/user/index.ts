@@ -1,6 +1,7 @@
-import { Router } from 'express'
+import { FastifyRouteRegister } from '@http/types'
+import getUserRoute from './get'
+import postUserRoute from './post'
 
-const userRoutes = Router()
-
-userRoutes.post('/', userController.create)
+const indexRoutes: FastifyRouteRegister[] = [getUserRoute, postUserRoute]
+const userRoutes: FastifyRouteRegister[] = [...indexRoutes]
 export default userRoutes

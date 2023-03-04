@@ -3,8 +3,19 @@
       "sourceMap": true,
       "outDir": "dist",
       "strict": true,
-      "lib": ["esnext"],
+      "lib": ["es2017"],
       "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true
-    }
+      "forceConsistentCasingInFileNames": true,
+      "baseUrl": ".",
+      "paths": {
+        "@http/types": ["./app/modules/infra/http/types.ts"],
+      }
+    },
+    "include": [
+      "/**/*.ts", 
+    ],
+    "exclude": [
+      "**/*.spec.ts"
+    ]
+    
   }
