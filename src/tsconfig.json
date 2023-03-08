@@ -9,13 +9,11 @@
       "baseUrl": ".",
       "paths": {
         "@http/types": ["./app/modules/infra/http/types.ts"],
+        "@users/*":["./app/modules/users/*"]
       }
     },
-    "include": [
-      "/**/*.ts", 
-    ],
     "exclude": [
-      "**/*.spec.ts"
+      "*.spec.ts"
     ]
     
   }

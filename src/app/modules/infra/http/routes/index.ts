@@ -1,6 +1,6 @@
 import { type FastifyInstance } from 'fastify'
 import userRoutes from './user'
-import { FastifyRouteRegister } from '../types'
+import { type FastifyRouteRegister } from '../types'
 async function registerRoutes({
     app,
     routes,
@@ -22,7 +22,7 @@ async function registerRoutes({
 const routes = async (app: FastifyInstance): Promise<void> => {
     await registerRoutes({
         app,
-        routes: [...userRoutes],
+        routes: [userRoutes],
     })
 }
 

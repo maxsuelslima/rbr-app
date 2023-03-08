@@ -5,7 +5,7 @@
     },
     "extends": ["standard-with-typescript", "plugin:prettier/recommended"],
     "plugins":[
-        "prettier", "imports"
+        "prettier"
     ],
     "overrides": [
     ],

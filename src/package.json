@@ -6,12 +6,12 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "tsx watch index.ts && prisma generate",
-        "build": "tsup src",
+        "build": "tsup ./index.ts --dts --format cjs,esm",
         "format": "prettier --write .",
         "lint": "eslint --ext .ts .",
         "lint:fix": "eslint --ext .ts . --fix",
         "prisma:generate": "prisma generate",
-        "prisma:migrate": "prisma migrate dev --name init --schema"
+        "prisma:migrate": "prisma migrate dev"
     },
     "repository": {
         "type": "git",

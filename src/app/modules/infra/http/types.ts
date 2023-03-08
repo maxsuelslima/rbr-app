@@ -1,4 +1,8 @@
-import { FastifyInstance, FastifyReply, FastifyRequest } from "fastify"
+import {
+    type FastifyInstance,
+    type FastifyReply,
+    type FastifyRequest,
+} from 'fastify'
 
 export type FastifyRouteRegister = ({
     app,
@@ -8,19 +12,19 @@ export type FastifyRouteRegister = ({
 type RequestHandler = ({
     req,
     reply,
-}:{
-    req: FastifyRequest,
+}: {
+    req: FastifyRequest
     reply: FastifyReply
-})=> Promise<FastifyReply>
+}) => Promise<FastifyReply>
 export interface RouteController {
-    get?: RequestHandler,
-    post?: RequestHandler,
-    put?: RequestHandler,
-    delete?: RequestHandler,
-    patch?: RequestHandler,
-    options?: RequestHandler,
-    head?: RequestHandler,
-    trace?: RequestHandler,
-    connect?: RequestHandler,
-    all?: RequestHandler,
+    get?: RequestHandler
+    post?: RequestHandler
+    put?: RequestHandler
+    delete?: RequestHandler
+    patch?: RequestHandler
+    options?: RequestHandler
+    head?: RequestHandler
+    trace?: RequestHandler
+    connect?: RequestHandler
+    all?: RequestHandler
 }
